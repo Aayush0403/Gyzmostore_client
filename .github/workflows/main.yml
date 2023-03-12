@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - master
+      
 env:
   REACT_APP_AUTH_DOMAIN:${{secrets.REACT_APP_AUTH_DOMAIN}}
   REACT_APP_AUTH_CLIENT_ID:${{secrets.REACT_APP_AUTH_CLIENT_ID}}
+      
 jobs:
   build:
     name: Build
@@ -21,7 +23,7 @@ jobs:
         run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@v2
-        with:client/.env
+        with:
           name: build
           path: build
   deploy:
