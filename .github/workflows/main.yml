@@ -14,11 +14,13 @@ jobs:
         run: npm install
       - name: Build
         env:
+          REACT_APP_AUTH_DOMAIN:${{secrets.REACT_APP_AUTH_DOMAIN}}
+          REACT_APP_AUTH_CLIENT_ID:${{secrets.REACT_APP_AUTH_CLIENT_ID}}
           CI: false
         run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@v2
-        with:
+        with:client/.env
           name: build
           path: build
   deploy:
