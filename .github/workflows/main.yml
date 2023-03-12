@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
- 
+
 jobs:
   build:
     name: Build
@@ -17,6 +17,9 @@ jobs:
         env:
           REACT_APP_AUTH_DOMAIN: ${{secrets.REACT_APP_AUTH_DOMAIN}}
           REACT_APP_AUTH_CLIENT_ID: ${{secrets.REACT_APP_AUTH_CLIENT_ID}}
+          REACT_APP_STRIPE_APP_KEY: ${{secrets.REACT_APP_AUTH_CLIENT_ID}}
+          REACT_APP_DEV_URL: ${{secrets.REACT_APP_DEV_URL}}
+          REACT_APP_STRIPE_PUBLISH_KEY: ${{secrets.REACT_APP_STRIPE_PUBLISH_KEY}}
           CI: false
         run: npm run build
       - name: Archive Production Artifact
@@ -42,4 +45,3 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          
