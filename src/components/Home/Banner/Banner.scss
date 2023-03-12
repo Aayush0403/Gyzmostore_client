@@ -1,0 +1,97 @@
+@import "../../../css-config/mixins.scss";
+.hero-banner {
+    padding: 30px 0;
+    background-image: linear-gradient(to right, #f85454e6, #4a00e0);
+    @include md {
+        height: calc(100vh - 80px);
+    }
+    .content {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        position: relative;
+        @include md {
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        .banner-img {
+            position: relative;
+            z-index: 9;
+            width: 250px;
+            margin-bottom: 20px;
+            min-height: 270px;
+            min-width: 270px;
+            @include md {
+                width: 500px;
+                margin-right: -20px;
+                margin-top: 10px;
+                margin-bottom: 0; 
+                min-height: 700px;
+                min-width: 720px;
+            }
+            @include xxl {
+                width: 540px;
+                min-height: 670px;
+                min-width: 640px;
+                margin-right: -20px;
+                margin-top: 0;
+            }
+        }
+        .text-content {
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include md {
+                position: absolute;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @include xxl {
+                left: 0;
+            }
+            h1 {
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+                color: white;
+                margin-bottom: 20px;
+                @include md {
+                    font-size: 180px;
+                }
+            }
+            p {
+                max-width: 300px;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include md {
+                    max-width: 500px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 20px;
+                }
+            }
+            .red{
+                color: rgba(4, 4, 85, 0.871);
+                margin-bottom: 0;
+            }
+            .banner-button{
+                padding: 14px;
+                cursor: pointer;
+                font-weight: bold;
+                border: none;
+                border-radius: 4px;
+                color: #fff;
+                background-image: linear-gradient(to right, #9e0cc3, #850578);
+                
+            }
+        }
+    }
+}

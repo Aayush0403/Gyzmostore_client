@@ -1,0 +1,114 @@
+@import "../../css-config/mixins.scss";
+.user-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transform: translateY(100%);
+    animation: slideSearchWindow 0.5s ease forwards;
+}
+.form-field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 50px;
+    position: relative;
+    @include md {
+        padding: 40px 10;
+    }
+    .close-btn {
+        position: absolute;
+        font-size: 25px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        @include md {
+            right: 40px;
+            font-size: 50px;
+        }
+    }
+}
+
+@keyframes slideSearchWindow {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.ctxs{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -40px;
+    margin-left: 10px;
+
+    h1
+    {
+        font-size: 70px;
+        color: #797878a6 ;
+      
+    }
+
+}
+.prev{
+    margin-left: 25px;
+    margin-top:35px;
+    font-size: 30px;
+    padding-bottom: 12px;
+    color: #d30d0dd5;
+    @include md {
+        margin-left: 75px;
+    }
+    &:after {
+        content: "";
+        display: block;
+        margin-top: 5px;
+        width: 50px;
+        height: 3px;
+        background-color:#8e2de2;
+        @include md {
+            margin-top: 10px;
+        }
+    }
+}
+section{
+    height: 560px;
+    overflow: scroll;
+    cursor: all-scroll;
+    
+}
+.no-orders{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    color: #b81515bd;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.no-bag{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: -20px;
+    font-weight: bolder;
+    font-size: 180px;
+    color: #797878a6;
+
+
+}
+.mail{
+    margin-left: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   b{
+    font-size: 20px;
+    color: #6f6d6dbd;
+   }
+}

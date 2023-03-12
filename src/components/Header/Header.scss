@@ -1,0 +1,93 @@
+@import "../../css-config/mixins.scss";
+
+
+.main-header{
+    display: flex;
+    background-image: linear-gradient(to right, #9c4b2d, #3b118e);
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border-bottom: px solid rgba(0,0,0,.1);
+    width: 100%;
+    position: sticky;
+    top:0;
+    z-index: 10;
+    @include sm{
+        padding: 0 5px;
+         }
+
+   .logo{
+         display: flex;
+         align-items: center;
+
+     img{
+        height: 80px;
+        border-radius: 20%;
+        cursor: pointer;
+        padding: 4px 2px;
+        margin-left: -20px;
+        @include sm{
+           height: 60px;
+           margin: 2px;
+             }
+    }
+   }
+
+    .left {
+        display: flex;
+        gap: 35px;
+        text-transform: uppercase;
+        display: none;
+        @include sm{
+            display: none;
+            }
+        
+    li
+    {
+        
+        list-style-type: none;
+        cursor: pointer;
+        font-size:large;
+    }
+
+    }
+    .right{
+        display: flex;
+        gap: 40px;
+        @include sm{
+           gap:25px;
+           padding-right:20px ;
+            }
+           
+
+        li
+        {
+            font-size: x-large;
+            cursor: pointer;
+            list-style-type: none;
+
+            .cart-icon{
+                position: relative;
+            }
+            .cart-count{
+                font-size: small;
+                background-color: #319df6e0;
+                padding: 0px 7px;
+                position: absolute;
+                top:-8px;
+                left:16px;
+                border-radius: 50%;
+                max-width: 27px;
+                max-height: 30px;
+                
+            }
+        }
+        
+    }
+}
+
+li:hover{
+    opacity: .5;
+    transform: scale(120%);
+}

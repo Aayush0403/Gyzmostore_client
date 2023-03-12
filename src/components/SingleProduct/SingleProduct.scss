@@ -1,0 +1,252 @@
+@import "../../css-config/mixins.scss";
+.single-product-main-content {
+    margin: 20px 0;
+    @include md {
+        margin: 75px 0;
+    }
+    .layout {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md {
+            max-width: 1200px;
+        }
+        .single-product-page {
+            display: flex;
+            flex-direction: column;
+            @include md {
+                flex-direction: row;
+            }
+            .left {
+                width: 100%;
+                border-radius: 30px;
+                background: linear-gradient(145deg, #cacaca, #f0f0f0);
+                box-shadow:  21px 21px 63px #c7c7c7, -21px -21px 63px #f9f9f9;
+                flex-shrink: 0;
+               
+                @include md {
+                    width: 500px;
+                    height: 500px;
+                    margin-top: -20px;
+                    margin-bottom: 60px;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                    border-radius: 30px;
+                   
+                }
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                padding-top: 20px;
+                @include md {
+                    padding: 0 35px;
+                }
+                .name {
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin-bottom: 20px;
+                    @include md {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+                }
+                .price {
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 20px;
+                }
+                .desc {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                    color: #6b6b6b;
+                    @include md {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .cart-buttons {
+                    display: flex;
+                    @include md {
+                        margin-top: 30px;
+                    }
+                    .quantity-buttons {
+                        width: fit-content;
+                        display: flex;
+                        border: 2px solid rgba(0, 0, 0, 0.2);
+                        margin-right: 10px;
+                        height: 50px;
+                        span {
+                            font-size: 18px;
+                            width: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            color: #6b6b6b;
+                            &:nth-child(1) {
+                                border-right: 2px solid rgba(0, 0, 0, 0.2);
+                            }
+                            &:nth-child(2) {
+                                width: 60px;
+                            }
+                            &:nth-child(3) {
+                                border-left: 2px solid rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                    .add-to-cart-button {
+                        outline: 0;
+                        border: 0;
+                        height: 50px;
+                        width: 180px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        font-size: 16px;
+                        color: white;
+                        background: #8e2de2;
+                        border-bottom: 3px solid #6516aa;
+                        flex-grow: 1;
+                        @include md {
+                            flex-grow: unset;
+                        }
+                        svg {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .divider {
+                    margin: 20px 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+
+                .info-item {
+                    .text-bold {
+                        font-size: 18px;
+                        font-weight: 500;
+                        display: block;
+                        &:nth-child(1) {
+                            margin-bottom: 20px;
+                        }
+                        span {
+                            font-size: 16px;
+                            font-weight: 400;
+                            cursor: pointer;
+                            color: #6b6b6b;
+                           
+                        }
+                        svg {
+                            margin: 0 5px;
+                        }
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.related-products .products{  
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 20px;
+    overflow-x: auto;
+    @include md {
+       gap: 30px;
+     }
+}
+
+.related-products .products .thumbnail{
+    
+    width: 200px;
+    @include md {
+       width: 250px;
+       height: 250px;
+    }
+}
+.related-products .prod-details{
+    width: 200px;
+    @include md {
+        width: 250px;
+     }
+
+} 
+
+.marquee {
+    position: relative;
+    height: 320px;
+    width: 100%;
+    overflow-x: auto;
+    
+    @include md {
+        height: 360px;
+        width: 110%;
+        margin-left: -5%;
+        overflow-x: hidden;
+    }
+  }
+  .track {
+    position: absolute;
+    white-space:wrap;
+    will-change: transform;
+   
+    @include md {
+        animation: marquee 8s linear infinite; 
+        width: 160%;
+    }
+  }
+  .track:hover {
+    animation-play-state: paused;
+  }
+.related-products .products .thumbnail img:hover{
+    background-color: #f02d34;
+    border-radius: 30px;
+    transform: scale((1.26));
+  }
+
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-38%); }
+    
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .related{
+    margin-top: -3px;
+    margin-left: -3px;
+    @include md {
+        
+        margin-left: 0%;
+        margin-top: -5px;
+    }
+
+  }
+  .left img:hover{
+    background-color: #f02d34;
+    cursor: pointer;
+    
+  }
+    
+
+    ::-webkit-scrollbar {
+            display: none;
+          }
+    .marquee .track{
+        ::-webkit-scrollbar {
+            display: block;
+          }
+
+    }
+    
