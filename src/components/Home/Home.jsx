@@ -38,7 +38,7 @@ const Home = () => {
             
          { categories && <Category categories={categories} />}
         </div>
-        <div className="sec-heading">Trending Productss</div>
+        <div className="sec-heading">Trending Products</div>
         <div className="layout">
           <div>
             <Products products={products} />
