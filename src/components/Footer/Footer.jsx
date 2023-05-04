@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
             <div className="bottom-bar">
                 <div className="bottom-bar-content">
-                  { isAuthenticated && user.name ==='aayushgupta0403@gmail.com' ? ( <span className="admin"><Link to={'https://gyzmostore-486u.onrender.com/admin'}>
+                  { isAuthenticated && user.name ==='aayushgupta0403@gmail.com' ? ( <span className="admin"><Link to={'https://dashboard.stripe.com/test/payments'}>
                     <div className="admin-cont"><RiAdminFill/><h6>ADMIN</h6></div></Link></span>) :
                   ( <span className="admin"><div className="admin-cont"><RiAdminFill/><h6>ADMIN</h6></div></span>)}
                     <span className="text">
