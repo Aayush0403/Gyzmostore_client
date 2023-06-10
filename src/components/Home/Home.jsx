@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   const getProducts = () => {
-    fetchDataFromApi("/api/products?populate=*&sort[0]=price&pagination[start]=0&pagination[limit]=16").then(res => {
+    fetchDataFromApi("/api/products?populate=*&sort[0]=price&pagination[start]=0&pagination[limit]=4").then(res => {
       setProducts(res);
       console.log(res);
     });
