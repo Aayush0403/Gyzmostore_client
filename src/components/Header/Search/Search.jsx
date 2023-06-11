@@ -56,7 +56,7 @@ const Search = ({ setSearchModal }) => {
                             <div className="image-container">
                                 <img
                                     src={
-                                        item.attributes.image.data[0].attributes.url
+                                        item.attributes.image.data.attributes.url
                                     }
                                     alt="search"
                                 />
