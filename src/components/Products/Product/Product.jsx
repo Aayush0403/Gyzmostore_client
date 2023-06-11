@@ -12,7 +12,7 @@ const Product = ({ data, id }) => {
        }}>
             <div className="thumbnail">
                <img src={
-                        data.image.data[0].attributes.url} alt="product" />
+                        data.image.data.attributes.url} alt="product" />
             </div>
             <div className="prod-details">
                 <span className="name">{data.title}</span>
