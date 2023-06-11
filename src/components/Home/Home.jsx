@@ -26,6 +26,7 @@ const Home = () => {
     fetchDataFromApi("/api/categories?populate=*").then(res => {
       setCategories(res);
       console.log(res);
+      console.log(res);
     });
   };
   return (
