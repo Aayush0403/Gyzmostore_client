@@ -38,7 +38,7 @@ const SingleProduct = () => {
                 <div className="single-product-page">
                     <div className="left">
                        <img src={
-                                product.image.data[0].attributes.url} alt="single-prod" />
+                                product.image.data.attributes.url} alt="single-prod" />
                     </div>
                     <div className="right">
                         <span className="name">{product.title}</span>
