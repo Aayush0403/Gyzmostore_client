@@ -24,7 +24,7 @@ const Userorder = ({order,date}) => {
             <div className="orders">
                 <div className="content">
                     <div className="image-container">
-                        <img src={item.attributes.image.data[0].attributes.url} alt="" />
+                        <img src={item.attributes.image.data.attributes.url} alt="" />
                     </div>
                      <h4>{item.attributes.title}</h4>
                 </div>
