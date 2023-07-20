@@ -3,7 +3,7 @@ import Products from "../../Products/Products";
 import useFetch from "../../../hooks/useFetch";
 const RelatedProducts = ({ categoryId, productId }) => {
     const { data } = useFetch(
-        `/api/products?populate=*&filters[id][$ne]=${productId}&filters[categories][id]=${categoryId}&pagination[start]=0&pagination[limit]=10`
+        `/api/products?populate=*&filters[id][$ne]=${productId}&filters[categories][id]=${categoryId}&pagination[start]=0&pagination[limit]=8`
     );
 
     return (
