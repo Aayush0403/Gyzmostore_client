@@ -58,8 +58,10 @@ const Footer = () => {
             </div>
             <div className="bottom-bar">
                 <div className="bottom-bar-content">
-                  { isAuthenticated && user.name ==='aayushgupta0403@gmail.com' ? ( <span className="admin"><Link to={'https://dashboard.stripe.com/test/payments'}>
-                    <div className="admin-cont"><RiAdminFill/><h6>ADMIN</h6></div></Link></span>) :
+                   { isAuthenticated && user.name ==='aayushgupta0403@gmail.com' ? ( <span className="admin">
+                    <div className="admin-cont" ><RiAdminFill/><h6>ADMIN</h6><div className="links">
+                     <a href="https://dashboard.stripe.com/test/payments" target="blank"><button>View Orders</button></a> &nbsp; 
+                     <a href="https://apigyzmostore.onrender.com/admin" target="blank"><button>Add Products</button></a></div></div></span>) :
                   ( <span className="admin"><div className="admin-cont"><RiAdminFill/><h6>ADMIN</h6></div></span>)}
                     <span className="text">
                         GIZMO-STORE 2023 CREATED BY AAYUSH. PREMIUM E-COMMERCE
